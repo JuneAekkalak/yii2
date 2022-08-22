@@ -3,7 +3,7 @@ use app\models\Products;
 
 /** @var yii\web\View $this */
 
-$products = Products::find()->all();
+$products = Products::find()->where(['status'=>'1'])->all();
 //var_dump($products);
 
 $this->title = 'My Yii Application';
