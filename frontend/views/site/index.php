@@ -6,7 +6,7 @@ use app\models\Products;
 $products = Products::find()->where(['status'=>'1'])->all();
 //var_dump($products);
 
-$this->title = 'My Yii Application';
+$this->title = 'SHOP';
 ?>
 <div class="site-index mx-auto mt-5 mb-5">
     <div class="row">
@@ -30,7 +30,7 @@ $this->title = 'My Yii Application';
                                                 <h5 class="fw-bold text-1000 text-truncate px-2"><?=$obj->product_name ?></h5>
                                                 <div class="fw-bold"><span class="text-600 me-2 px-2 text-decoration-line-through">$<?=$obj->price ?></span><span class="text-primary">$<?=$obj->price-3000 ?></span></div>
                                             </div>
-                                            <a class="stretched-link" href="#"></a>
+                                            <a class="stretched-link btn btn-info " href="#">ซื้อสินค้า</a>
                                         </div>
                                     </div>
                             <?php }
