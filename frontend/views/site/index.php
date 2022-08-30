@@ -6,7 +6,7 @@ use app\models\Products;
 $products = Products::find()->where(['status'=>'1'])->all();
 //var_dump($products);
 
-$this->title = 'SHOP';
+$this->title = 'SHIRT SHOP';
 ?>
 <div class="site-index mx-auto mt-5 mb-5">
     <div class="row">
