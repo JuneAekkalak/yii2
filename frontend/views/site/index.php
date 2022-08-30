@@ -30,7 +30,7 @@ $this->title = 'SHOP';
                                                 <h5 class="fw-bold text-1000 text-truncate px-2"><?=$obj->product_name ?></h5>
                                                 <div class="fw-bold"><span class="text-600 me-2 px-2 text-decoration-line-through">$<?=$obj->price ?></span><span class="text-primary">$<?=$obj->price-3000 ?></span></div>
                                             </div>
-                                            <a class="stretched-link btn btn-info " href="#">ซื้อสินค้า</a>
+                                            <a class="stretched-link btn btn-info " href="index.php?r=products/view&_id=<?=$obj->_id?>">ซื้อสินค้า</a>
                                         </div>
                                     </div>
                             <?php }

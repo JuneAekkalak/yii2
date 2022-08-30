@@ -1,12 +1,12 @@
 /* Basic Styling */
-html, body {
+/* html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-}
+} */
 
-.container {
+.product {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px;

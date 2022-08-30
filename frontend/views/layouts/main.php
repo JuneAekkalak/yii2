@@ -22,6 +22,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <link href="../../theme/assets/css/theme.css" rel="stylesheet" />
+    <!-- <link href="../../theme/product-page/style.css" rel="stylesheet" /> -->
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -44,7 +45,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = ['label' => 'Cart', 'url' => ['/site/cart']];
+        $menuItems[] = ['label' => 'Cart', 'url' => ['/cart/index']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
             . Html::submitButton(

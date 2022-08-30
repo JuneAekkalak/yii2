@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use app\models\Cart;
 use app\models\Products;
 use app\models\ProductsSearch;
 use yii\web\Controller;
@@ -33,8 +34,14 @@ class ProductsController extends Controller
 
     public function actionView($_id)
     {
+        $cartModel = new Cart();
+        if ($this->request->isPost && $cartModel->load($this->request->post()) && $cartModel->save()) {
+            return $this->redirect(['cart/index']);
+        }
         return $this->render('view', [
             'model' => $this->findModel($_id),
+            'product_id' => $_id,
+            'cartModel' => $cartModel
         ]);
     }
 
