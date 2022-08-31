@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use Yii;
 use app\models\Cart;
 use app\models\CartSearch;
 use yii\web\Controller;
@@ -38,12 +39,14 @@ class CartController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new CartSearch();
-        $dataProvider = $searchModel->search($this->request->queryParams);
+        $cart = Cart::find()->where(["user_id"=>(String)Yii::$app->user->identity->id])->all();
+        // $searchModel = new CartSearch();
+        // $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'cart' => $cart,
+            // 'searchModel' => $searchModel,
+            // 'dataProvider' => $dataProvider,
         ]);
     }
 
